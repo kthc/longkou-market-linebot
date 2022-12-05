@@ -16,18 +16,22 @@ class BibleDB:
     
     def create_userlog_table(self):
         cur = self.con.cursor()
-        listOfTables = cur.execute(
-        f"""SELECT name FROM sqlite_master WHERE type='table'
-        AND name='UserLog'; """).fetchall()
+        # listOfTables = cur.execute(
+        # f"""SELECT name FROM sqlite_master WHERE type='table'
+        # AND name='UserLog'; """).fetchall()
+        cur.execute(
+            f"""CREATE TABLE IF NOT EXISTS UserLog(UserID VARCHAR(255), CurStoryID int, Finished int, LoginCount int, RetryCount int);""")
+        self.con.commit()
+        print('UserLog table created')
         
-        if len(listOfTables) == 0:
-            print(f'UserLog table not found!')
-            cur.execute(
-            f"""CREATE TABLE UserLog(UserID VARCHAR(255), CurStoryID int, Finished int, LoginCount int, RetryCount int);""")
-            self.con.commit()
-            print('UserLog table created')
-        else:
-            print('UserLog Table found!')
+        # if len(listOfTables) == 0:
+        #     print(f'UserLog table not found!')
+        #     cur.execute(
+        #     f"""CREATE TABLE IF NOT EXISTS UserLog(UserID VARCHAR(255), CurStoryID int, Finished int, LoginCount int, RetryCount int);""")
+        #     self.con.commit()
+        #     print('UserLog table created')
+        # else:
+        #     print('UserLog Table found!')
     
     def drop_table(self):
         cur = self.con.cursor()
