@@ -129,6 +129,7 @@ if __name__ == '__main__':
     host = '127.0.0.1'是只監聽你開發用的電腦上的client(瀏覽器就是client)
     port: 像是這個ip下的門牌,每一個server要有自己獨立的port
     '''
-    app.run(host='0.0.0.0', port=5001, debug=True)
+    port = os.getenv('PORT', default=5001)
+    app.run(host='0.0.0.0', port=port, debug=True)
     # app = create_app()
     # app.run(host='0.0.0.0', port=5001, debug=True)  
