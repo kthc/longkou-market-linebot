@@ -114,8 +114,10 @@ def check_if_can_go_next_story(event, ans):
     else:
         story_id = db.get_storyid_by_userid(user_id)
         cur_retry = db.get_retry_count_by_userid(user_id)
-        ok = s_mang.check_answer(event, story_id, ans, retry_count=cur_retry)
         end = s_mang.is_end_story(story_id)
+        if end:
+            return
+        ok = s_mang.check_answer(event, story_id, ans, retry_count=cur_retry)
         if ok and not end:
             next_story_id = s_mang.next_story(story_id)
             db.update_story_id(user_id,next_story_id.id)
