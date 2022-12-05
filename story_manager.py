@@ -78,7 +78,7 @@ class Story_Manager:
             story.simple_audio_maker(31, audio_name='21', sender_name='小亭_10', button_label='痾.......', text_after_clicked='我想想喔，你打電話給他爸媽，告訴他們孩子被綁在哪？'),
             story.simple_audio_maker(32, audio_name='22', sender_name='小亭_10', button_label='聲音？', text_after_clicked='聲音，嗯……的確聽不到，讓我想想。\n對了，你可以錄下來給我啊，你應該在民國90幾年了吧！已經可以傳音訊給我了。'),
             story.simple_audio_maker(34, audio_name='23', sender_name='小亭', button_label='急死人了...', text_after_clicked='快快快'),
-            story.simple_audio_maker(341, audio_name='Q5', sender_name='小亭', button_label='好像...', text_after_clicked='嗯？按號碼的聲音，這個應該有用\n​https://onlinetonegenerator.com/dtmf.html(請記得打開聲音喔!)'),
+            story.simple_audio_maker(341, audio_name='Q5', sender_name='小亭', button_label='好像...', text_after_clicked='嗯？按號碼的聲音，這個應該有用\n​https://onlinetonegenerator.com/dtmf.html(若聽不到聲音請注意靜音鍵喔!)'),
             # label='好像...', display_text='''嗯？按號碼的聲音，這個應該有用\n​https://onlinetonegenerator.com/dtmf.html'''
             # story.simple_audio_maker(33, audio_name='23', sender_name='小亭', button_label='好像...', text_after_clicked='嗯？按號碼的聲音，這個應該有用。'),
             # story.Question5(),
