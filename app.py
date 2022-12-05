@@ -2,6 +2,10 @@
 聖經OnLine v1.0
 '''
 import os
+
+from dotenv import load_dotenv
+load_dotenv()
+
 from bible_database import db
 from flask import Flask, request, abort
 from app_global import line_bot_api, handler
@@ -20,10 +24,6 @@ from linebot.models import (
     PostbackEvent,
     FollowEvent
 )
-# from waitress import serve
-from dotenv import load_dotenv
-
-load_dotenv()
 
 app = Flask(__name__)
 
