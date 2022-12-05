@@ -20,6 +20,9 @@ from linebot.models import (
     PostbackEvent,
     FollowEvent
 )
+from dotenv import load_dotenv
+
+load_dotenv()
 # from waitress import serve
 
 app = Flask(__name__)
