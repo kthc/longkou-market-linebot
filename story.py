@@ -280,7 +280,7 @@ class Question1(Story):
     def get_main_message(self):
         return [
             TextSendMessage(
-                text='https://youtu.be/pNme8J4FCN8',
+                text='https://youtu.be/Bwy8MbB1oZo',
                 # original_content_url=video_dict['Q1']['url'], preview_image_url=video_dict['Q1']['preview'], sender=roles.get(
                 #     "BG", None),
                 sender=roles.get("BG", None),
@@ -392,7 +392,7 @@ class Question2(Story):
             TextSendMessage(
                 # original_content_url=video_dict['Q2']['url'],
                 # preview_image_url=video_dict['Q2']['preview'],
-                text='https://youtu.be/PdOlA0FZ2Io',
+                text='https://youtu.be/FkJc2h2uEn4',
                 quick_reply=QuickReply(
                     items=[
                         QuickReplyButton(
@@ -467,7 +467,7 @@ class Question3(Story):
             #         "BG", None)
             # ),
             TextSendMessage(
-                text='https://youtu.be/LocFySbWcQA',
+                text='https://youtu.be/aVUP9WBsoTc',
                 sender=roles.get("BG", None)
             ),
             TextSendMessage(text='牛肉麵____元？請輸入',
