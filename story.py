@@ -657,8 +657,8 @@ class Ending(Story):
                             text=f'解題策略:https://drive.google.com/file/d/1KG0nVTn0Y9sMRT-go2oPpwWtqB4QIEU5/view'
                         ),
                         MessageTemplateAction(
-                            label='龍口歷史',
-                            text=f'龍口歷史:TBD'
+                            label='NG片段',
+                            text=f'NG片段:TBD'
                         ),
                     ]
                 )
