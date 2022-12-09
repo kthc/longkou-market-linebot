@@ -650,7 +650,7 @@ class Ending(Story):
                     actions=[
                         MessageTemplateAction(
                             label='小亭走過哪',
-                            text=f'小亭走過哪:https://drive.google.com/file/d/1_6PpXr0uA8CNEqhKvw1-YcCvJo6r8jUE/view'
+                            text=f'小亭走過哪:https://sites.google.com/view/kthc?pli=1'
                         ),
                         MessageTemplateAction(
                             label='解題策略',
