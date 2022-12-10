@@ -645,7 +645,7 @@ class Ending(Story):
             TemplateSendMessage(
                 alt_text='Buttons template',
                 template=ButtonsTemplate(
-                    title='恭喜破關！奉上幕後花絮：',
+                    title='恭喜破關！',
                     text='奉上幕後花絮：',
                     actions=[
                         MessageTemplateAction(
