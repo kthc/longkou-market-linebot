@@ -352,20 +352,20 @@ class OneHourLater(Story):
     def get_main_message(self):
         video = video_dict.get(self.video_name, None)
         return [
-            TextSendMessage(text='1小時後',
+            TextSendMessage(text='࿓༄ 1小時後  ࿓',
                             sender=roles.get("BG", None)),
-            VideoSendMessage(
-                original_content_url=video['url'],
-                preview_image_url=video['preview'],
-                quick_reply=QuickReply(
-                    items=[
-                        QuickReplyButton(
-                            action=MessageAction(
-                                label=self.label, text=self.display_text)
-                        )
-                    ]
-                ),
-                sender=roles.get(self.sender_name, None))
+            # VideoSendMessage(
+            #     original_content_url=video['url'],
+            #     preview_image_url=video['preview'],
+            #     quick_reply=QuickReply(
+            #         items=[
+            #             QuickReplyButton(
+            #                 action=MessageAction(
+            #                     label=self.label, text=self.display_text)
+            #             )
+            #         ]
+            #     ),
+            #     sender=roles.get(self.sender_name, None))
         ]
 
     def check_ans(self, ans, force_correct=False, retry_count=0):
@@ -645,8 +645,8 @@ class Ending(Story):
             TemplateSendMessage(
                 alt_text='Buttons template',
                 template=ButtonsTemplate(
-                    title='幕後花絮集錦',
-                    text='想更深入了解龍口市場的歷史跟我們團隊嗎?請點選下面按鈕',
+                    title='恭喜破關！奉上幕後花絮：',
+                    text='奉上幕後花絮：',
                     actions=[
                         MessageTemplateAction(
                             label='小亭走過哪',
@@ -657,7 +657,7 @@ class Ending(Story):
                             text=f'解題策略:https://drive.google.com/file/d/1KG0nVTn0Y9sMRT-go2oPpwWtqB4QIEU5/view'
                         ),
                         MessageTemplateAction(
-                            label='NG片段',
+                            label='NG片花',
                             text=f'NG片段:TBD'
                         ),
                     ]
