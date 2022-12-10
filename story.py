@@ -353,6 +353,14 @@ class OneHourLater(Story):
         video = video_dict.get(self.video_name, None)
         return [
             TextSendMessage(text='࿓༄ 1小時後  ࿓',
+            quick_reply=QuickReply(
+                    items=[
+                        QuickReplyButton(
+                            action=MessageAction(
+                                label=self.label, text=self.display_text)
+                        )
+                    ]
+                ),
                             sender=roles.get("BG", None)),
             # VideoSendMessage(
             #     original_content_url=video['url'],
