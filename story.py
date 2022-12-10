@@ -497,6 +497,48 @@ class Question3(Story):
         return False, [TextSendMessage(text=self.reply_messages_wrong[rnd_reply_idx])]
 
 
+class WakeByPhone(Story):
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(args, kwargs)
+        '''story.simple_audio_maker(25, audio_name='16', sender_name='小亭_09', button_label='白眼', text_after_clicked='誰叫你都不好好學啊！算了沒事，來吧！什麼問題啊？'),'''
+        self.id = 923
+        self.story_name = ''
+        self.pre_messages = []
+        self.post_messages = []
+        self.ans = ''
+        self.reply_messages_wrong = []
+        self.main_messages = []
+        self.sender_name = "BG"
+        self.video_name = 'WakeByPhone'
+        self.label = '白眼'
+        self.display_text = '誰叫你都不好好學啊！算了沒事，來吧！什麼問題啊？'
+
+    def get_main_message(self):
+        audio = audio_dict.get('16', None)
+        if audio_dict.get('16', None) is None:
+            audio = audio_dict.get('not_found', None)
+        return [
+            TextSendMessage(text='࿓༄ 突然被手機震醒  ࿓ ',
+                            sender=roles.get("BG", None)),
+            AudioSendMessage(
+                original_content_url=audio['url'],
+                duration=audio['duration'],
+                quick_reply=QuickReply(
+                    items=[
+                        QuickReplyButton(
+                            action=MessageAction(
+                                label='白眼', text='誰叫你都不好好學啊！算了沒事，來吧！什麼問題啊？')
+                        )
+                    ]
+                ),
+                sender=roles.get('小亭_09', None))
+        ]
+
+    def check_ans(self, ans, force_correct=False, retry_count=0):
+        '''return (True, Messages:list), Message is empty list if ans is correct, otherwise need to throw error message to reply to linbot'''
+        return True, []
+
+
 class Question4(Story):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(args, kwargs)
