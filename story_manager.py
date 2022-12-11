@@ -86,7 +86,7 @@ class Story_Manager:
             story.Question5_1(),
             # story.simple_audio_maker(34, audio_name='24', sender_name='小亭', button_label='有了！', text_after_clicked='有有有，電話號碼是7533967，你趕快打給他爸媽，告訴他孩子在哪裡。'),
             story.simple_audio_maker(35, audio_name='25', sender_name='小亭_11', button_label='好喔……', text_after_clicked='好喔……'),
-            story.simple_msg_maker(36, msg='過了一陣子', button_label='LINE？', text_after_clicked='LINE 語音?', sender_name="BG"),
+            story.simple_msg_maker(36, msg='࿓༄ 過了一陣子  ࿓', button_label='LINE？', text_after_clicked='LINE 語音?', sender_name="BG"),
             story.simple_audio_maker(37, audio_name='26', sender_name='小亭_19', button_label='真的假的？', text_after_clicked='等等等，摸了摸貓，就回來了？為什麼啊？怎麼那麼容易？'),
             story.simple_audio_maker(38, audio_name='27', sender_name='小亭', button_label='怎麼了？', text_after_clicked='怎麼了？又發生什麼事？'),
             story.simple_audio_maker(39, audio_name='28', sender_name='小亭', button_label='難道說...', text_after_clicked='喔，看來那隻貓有不為人知的能力呢！'),
