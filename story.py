@@ -707,8 +707,12 @@ class Ending(Story):
                             text=f'解題策略:https://drive.google.com/file/d/1KG0nVTn0Y9sMRT-go2oPpwWtqB4QIEU5/view'
                         ),
                         MessageTemplateAction(
-                            label='NG片花',
-                            text=f'NG片段:TBD'
+                            label='我來唸歌囉',
+                            text=f'我來唸歌囉:https://youtu.be/ytUI_zoh0pA'
+                        ),
+                        MessageTemplateAction(
+                            label='兒時愛聽廣播',
+                            text=f'兒時愛聽廣播:https://youtu.be/5_GfMCdeyf4'
                         ),
                     ]
                 )
