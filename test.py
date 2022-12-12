@@ -36,15 +36,15 @@ def gen_audio_dict():
     print(sound_dict)
 
 def convert_2_m4a():
-    files = glob.glob(r'C:\Users\super\Downloads\20221122\*.mp3')
+    files = glob.glob(r'C:\code\#1-#5修改新版\*.mp3')
     print(files)
     for f in files:
         filename = os.path.basename(f)
         dirname = os.path.dirname(f)
-        matched = re.search(r'小亭錄音#([\d]*).mp3',filename)
+        matched = re.search(r'小亭錄音#([\d]*)[\w\s]*.mp3',filename)
         if matched:
             id_number = int(matched.groups()[0])
-            subprocess.call([r"tool\ffmpeg.exe", '-i', f"{f}", os.path.join(dirname, f"audio_{id_number:02d}.m4a")])
+            subprocess.call([r"C:\code\#1-#5修改新版\ffmpeg.exe", '-i', f"{f}", os.path.join(dirname, f"audio_{id_number:02d}.m4a")])
 
 
 def get_file_property():
